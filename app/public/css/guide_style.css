@@ -92,9 +92,9 @@ color:rgb(11, 8, 8);
 }
 
 .userGuide_view iframe{
-    margin:3vw 0vw 0vw 23vw;
-    width: 55vw;
-    height: 55vw;
+    margin:3vw 0vw 0vw 20vw;
+    width: 60vw;
+    height: 60vw;
     text-align:center;
 }
 
@@ -226,5 +226,33 @@ color:rgb(11, 8, 8);
 
 /*----#### システムログイン前のトップページ（ここまで）####--------------------------------*/
 
+.editUserInformation{
+    margin:0vw 0vw 0vw 27vw;
+}
 
+.yourIcon{
+    font-size: 2vw;
+}
 
+.editUserInformation img{
+    margin:0vw 0vw 2vw 2vw;
+}
+
+.selectNewIcon{
+    position: absolute;
+    margin:16vw 0vw 0vw -26vw;
+}
+
+.editUserName{
+    margin:5.5vw 0vw 0vw 0vw;
+}
+
+.editUserAddress{
+    margin:1.5vw 0vw 0vw 0vw;
+}
+
+.changeUserInformation{
+    margin:1vw 0vw 0vw 0vw;
+    background-color: #9379fd;
+    border:none;
+}

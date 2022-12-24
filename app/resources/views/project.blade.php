@@ -40,7 +40,7 @@
 
             </div>
 
-            @if($user->roll !== "member")
+            @if($user->role == "admin")
                 <a href="{{route('projectEditLink',$projectItem['id'])}}"><button class="projectEdit">Edit</button></a>
                 <button type="submit" data-project_id="{{$projectItem['id']}}" class="projectDelete">Delete</button>
             @endif
@@ -52,9 +52,11 @@
       </table>
     @endif
    
+    @if($user->role == "admin")
     <div class="addProjectAll">
        <a href="{{route('addProjectLink')}}"><button class="addProjectButton">Add Project ⊹</button></a>
     </div>
+    @endif
 
   </main>
 

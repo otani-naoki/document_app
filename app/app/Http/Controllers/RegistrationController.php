@@ -82,7 +82,7 @@ public function saveFolder(Request $request, int $projectId){
 public function saveFile(Request $request){
     $user=Auth::user(); //ログインユーザーの情報を全て取得
     $fileName=$request->file('upload_file')->getClientOriginalName();
-    $request->file('pdf')->storeAs('public/files/',$fileName);
+    $request->file('upload_file')->storeAs('public/files/',$fileName);
     
     $document = new Document;
     $document->file = $fileName;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\support\Facades\Auth;
+use App\Document;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $user=Auth::user();
-        return view('home', ['user'=>$user]);
+        $documents = Document::join('likes', 'documents.id', '=', 'likes.document_id')
+        ->get();
+        return view('home', ['user'=>$user,'favorites'=>$documents]);
     }
 }

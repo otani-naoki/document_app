@@ -21,7 +21,7 @@ Route::get('/', 'DisplayController@index');
 Route::post('/guide', 'RegistrationController@guide')->name('guideCreateLink');
 
 
-Route::get('/guide_download/{guideName}', 'DownloadController@guide')->name('guideDownloadLink');
+Route::get('/guide_download', 'DownloadController@guide')->name('guideDownloadLink');
 
 /* → Documents*/
 Route::get('/documents', 'DisplayController@documentList')->name('documentLink');

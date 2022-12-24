@@ -20,7 +20,9 @@ class DisplayController extends Controller
 {
 
     public function index(){
-        return view ('guide');
+        $user=Auth::user(); //ログインユーザーの情報を全て取得
+
+        return view ('guide', ['user'=> $user]);
     }
 
     public function documentList(){

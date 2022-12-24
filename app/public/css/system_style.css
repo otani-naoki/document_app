@@ -640,7 +640,7 @@ main{
 .file-title{
     color: #1279d3;
     font-size: 2.5vw;
-    margin:2vw 0vw 0vw 2.5vw;
+    margin:2vw 0vw 0vw 4vw;
 }
 
 .document-download{
@@ -659,8 +659,8 @@ main{
 .file-information{
     position: absolute;
     margin: 3vw 0vw 0vw 72vw;
-    height: 62vw;
-    width: 24vw;
+    height: 63vw;
+    width: 25vw;
     border: solid;
     border-width: 0.1vw;
 }
@@ -668,7 +668,7 @@ main{
 .file-information-top{
     font-size: 1.25vw;
     height: 2.5vw;
-    width: 24vw;
+    width: 25vw;
     margin:-0.1vw 0vw 0vw -0.1vw;
     border:solid;
     border-width: 0.1vw;
@@ -685,7 +685,7 @@ main{
 .file-information input{
     height: 2.5vw;
     width: 22vw;
-    margin: 3.5vw 0vw 0vw 1vw;
+    margin: 3.5vw 0vw 0vw 1.4vw;
 }
 
 #description_file{
@@ -698,9 +698,10 @@ main{
 }
 
 .documentView{
+    position: absolute;
     width: 65vw;
     height: 65vw;
-    margin:10vw 0vw 0vw -30vw;
+    margin:10vw 0vw 0vw 4vw;
 }
 
 
@@ -737,15 +738,16 @@ main{
         }
 
         #setImage img{
-            margin:2.5vw 5vw 0vw 0vw;
+            position: absolute;
+            margin:1.3vw 0vw 0vw -14vw;
         }
 
         #setUsrName{
-            margin:2.5vw 1vw 0vw 0vw;
+            margin:2.5vw 0vw 0vw 7vw;
         }
 
         #setAddress{
-            margin:0.5vw 1vw 0vw 0vw;
+            margin:0.5vw 0vw 0vw 7vw;
         }
 
         #changeInformation{
@@ -769,3 +771,6 @@ main{
     font-size: 2vw;
     margin: 8vw 0vw 0vw -10vw;
 }
+
+/* --- EditUserInformation */
+

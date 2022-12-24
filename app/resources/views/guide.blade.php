@@ -3,30 +3,35 @@
 @section('content')
       <main>
         <div class="login_line">
+         @if(Auth::check())
+         <a href="{{route('home')}}"><button class="login_button">System</button></a>
+         @else
          <a href="{{route('login')}}"><button class="login_button">Login</button></a>
+         @endif
          <img src="{{ asset('storage/images/buchada220200099.jpg') }}" class="systemImagePhoto">
        </div>
 
         <div class=userGuide_link>
         <p>User Guide</p>
-        
-        @if(isset($guideName))
-        <a href="{{route('guideDownloadLink', $guideName)}}">Download File Here</a>
-        @endif
-
+        <a href="{{route('guideDownloadLink')}}">Download File Here</a>
         </div>
 
         <div class=userGuide_view>
           <iframe src="{{ asset('storage/files/UserGuide_YYYYMMDD.pdf') }}"></iframe>
         </div>
 
+        {{-- @if(isset($user))
+        @if($user->role == "admin")
         <div>  <!---管理者のみの予定--->
            <button class="userGuide_upload">Upload</button>
         </div>
+        @endif
+        @endif --}}
+
 
            <!-----User Guide uploadモーダル---------------------->
 
-           <form method="post" action="{{route('guideCreateLink')}}" enctype="multipart/form-data">
+           {{-- <form method="post" action="{{route('guideCreateLink')}}" enctype="multipart/form-data">
 
              <div class="over-lay"></div>
               
@@ -39,7 +44,7 @@
                 </div>
               </div>
 
-            </form>
+            </form> --}}
               
            <!-----User Guide uploadモーダル---------------------->
 

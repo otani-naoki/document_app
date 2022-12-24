@@ -59,21 +59,12 @@
           <input type='date' name='documentDate'class="form-control"/>
         </div>
         <div class="description">
-          <label for='description' class='mt-2'>Description</label>
-          <input type='text' name='documentDescription' class="form-control"/>
+          <label for='description' class='mt-2' >Description</label>
+          <input type='text' name='documentDescription' class="form-control" vertical-align="top"/>
         </div>
       </div>
       <div class="save-document">
         <input type="submit" id="submit-btn" value="Save">
-      </div>
-
-      <div class="chose-document">
-         <div class="chose-document-top">
-            CHOSE DOCUMNET
-         </div>
-         <div class="chose-document-fileName">
-            ≪filename≫
-         </div>
       </div>
   
   </form>

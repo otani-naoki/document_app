@@ -8,9 +8,11 @@
        @endif
     </div>
 
+    @if($user->role == "admin")
     <div class="addFolderAll">
         <button class="addFolderButton">Add Folder ⊹</button>
     </div>
+    @endif
 
     @if(isset($folders))
     <table class="folderTable">

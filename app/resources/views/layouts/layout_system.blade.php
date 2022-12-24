@@ -71,9 +71,9 @@
 
         <div class="d-flex justify-content-center" id="setImage">
           @if(!$user->image)
-          <img src="{{ asset('storage/images/hitogata.jpg') }}" alt="アイコン" class="rounded-circle w-50 h-auto " >
+          <img src="{{ asset('storage/images/hitogata.jpg') }}" alt="アイコン" class="rounded-circle w-25 h-30" >
           @else
-          <img src="{{ asset('storage/images/'.$user->image) }}" alt="アイコン" class="rounded-circle w-25 h-50" >
+          <img src="{{ asset('storage/images/'.$user->image) }}" alt="アイコン" class="rounded-circle w-25 h-30" >
           @endif
             <div>
               <p id="setUsrName">{{$user->name}}</p>
