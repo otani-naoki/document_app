@@ -1,0 +1,771 @@
+@charset "UTF-8";
+
+/*----#### システムログイン後 ####---------------------------------------------------------*/
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+header{
+    width:100vw;   /* ← 固定すると幅が小さくなったので、bodyのサイズ設定に合わせた */
+}
+
+.systemHeader{
+    height:6.5vw;
+    padding:1vw 0vw 0vw 2vw;
+    background: linear-gradient(to bottom, #4ba6fb 0%, #fe3cb1 80%);
+    display:flex;  /*要素横並び*/
+    justify-content: space-between;
+
+}
+
+.systemName {
+    margin: -0.25vw 0vw 0vw 0vw;
+}
+
+.systemName a{
+    text-decoration: none;
+    font-size:3vw;
+    color: white;
+}
+
+
+.userName p{
+    margin:1vw 2vw 0vw 0vw;
+    text-decoration: none;
+    font-size:1.5vw;
+    color: white;
+}
+
+.userSystem img{
+    position: relative;
+    margin:0.8vw 5vw 0vw 0vw;
+}
+
+.systemBar{
+    background-color:rgb(168, 181, 199);
+    height:4.5vw;
+    box-shadow: 0 0vw 1vw rgb(200, 209, 232); /*ヘッダー下部に影*/
+
+}
+
+.systemBar{
+    display:flex;  /*要素横並び*/
+}
+
+.homeLink {
+    margin:0.5vw 0vw 0vw 4vw;
+    font-size: 2vw;
+    text-decoration: none;
+    color: black;
+}
+
+.projectLink {
+    margin:0.5vw 0vw 0vw 4vw;
+    font-size: 2vw;
+    text-decoration: none;
+    color: black;
+}
+
+
+.createButton {
+    position: absolute;
+    width: 6.5vw;
+    height: 3vw;
+    margin:0.8vw 0vw 0vw 70vw;
+    padding:0vw 0vw 0vw 0vw;
+    border-width:0.1vw;
+    color:white;
+    background: linear-gradient(to bottom, #183249 0%, #7350ff 80%);
+    border-radius: 0.7vw;  /* ←ボックスの角を丸く*/
+}
+
+main{
+    display: flex;  /* 子要素を横並びにする */
+
+}
+
+
+.sideBar{
+    width: 13.5vw;
+    height: 60vw;
+    background-color:white;
+    border-right: solid;
+    border-width: 0.01vw;
+}
+
+.favoritesTab{
+    margin:3vw 0vw 0vw 3vw;
+    position: absolute;
+}
+
+.favoritesTab a{
+    font-size: 1.5vw;
+    color:black;
+    text-decoration: none;
+}
+
+.documentsTab{
+    margin:9vw 0vw 0vw 3vw;
+    position: absolute;
+}
+
+.documentsTab a{
+    font-size: 1.5vw;
+    color:black;
+    text-decoration: none;
+}
+
+.systemTopDisplay{
+    display: flex;  /* 子要素を横並びにする */
+}
+
+.systemTopDisplayTitle{
+    width: 10vw;
+    height: 3vw;
+    font-size: 2.5vw;
+    margin:1vw 0vw 0vw 2vw;
+}
+
+.systemTopDisplaySearch{
+    margin:1.5vw 0vw 0vw 15vw;
+    display: flex;
+}
+
+.systemTopDisplaySearch input{
+    font-size: 1vw;
+    height: 3vw;
+    width: 30vw;
+}
+
+.SearchButton{
+    font-size: 1vw;
+    height:3vw;
+    color: white;
+    background-color: #595959;
+    margin:0vw 0vw 0vw 0.1vw;
+}
+
+.SearchClearButton{
+    font-size: 1vw;
+    height: 3vw;
+    background-color: #bdbdbd;
+    margin:0vw 0vw 0vw -0.3vw;
+}
+
+.SearchClearButton a{
+    text-decoration: none;
+    color:black;
+}
+
+.documentTable{
+    position: absolute;
+    margin:8vw 0vw 0vw 3.5vw;
+}
+
+.documentLine{
+    padding: 0em 0em 0.2em 0em;
+}
+
+.documentLine a{
+    font-size: 1.7vw;
+}
+
+/*----------------プロジェクト一覧画面-------------------*/
+
+.Project{
+    font-size: 2.5vw;
+    margin:1.5vw 0vw 0vw 2.5vw;
+}
+
+.projectsTable{
+    margin:-2vw 0vw 0vw -10vw;
+}
+
+.projectsLine{
+    padding:0em 0em 15em 0em;
+}
+
+
+.addProjectAll{
+    display: flex;
+    position: absolute;
+    margin:1.5vw 0vw 0vw 86vw;
+}
+
+.addProjectButton{
+    height:2vw;
+    width:8vw;
+    font-size: 1vw;
+    border-width:0.1vw;
+    margin:0vw 0vw 0vw 2vw;
+    background-color: rgb(223, 228, 254);
+}
+
+
+.projectView{
+    position: absolute;
+    margin:10vw 0vw 0vw 7vw;
+}
+
+.projectTitle{
+    font-size: 2vw;
+    color:black;
+}
+
+.projectDetail{
+    height: 14vw;
+    border: solid;
+    border-width: 0.1vw;
+    border-color: rgb(43, 44, 45);
+}
+
+.projectDetail_fixed{
+    height:12.5vw;
+    width:78vw;
+    border-width: 0.1vw;
+    display: flex;
+}
+
+.authorView_project{
+    height: 4.5vw;
+    width: 10vw;
+    margin:1.5vw 0vw 0vw 2vw;
+    border-bottom: 1px dotted #000;
+}
+
+.authorView_project h5{
+    font-size:1.5vw;
+}
+
+.authorView_project p{
+    font-size:1.2vw;
+    color:blue;
+}
+
+.startDateView_project{
+    margin:1.5vw 0vw 0vw 4vw;
+    height: 4.5vw;
+    width: 10vw;
+    border-bottom: 1px dotted #000;
+}
+
+.startDateView_project h5{
+    font-size:1.5vw;
+}
+
+.startDateView_project p{
+    font-size:1.2vw;
+    color:blue;
+}
+
+.objectView_project{
+    margin:1.5vw 0vw 0vw 4vw;
+    height: 4.5vw;
+    width: 45vw;
+    border-bottom: 1px dotted #000;
+}
+
+.objectView_project h5{
+    font-size:1.5vw;
+}
+
+.objectView_project p{
+    font-size:1.2vw;
+    color:blue;
+}
+
+.descriptionView_project{
+    margin:-5vw 0vw 0vw 2vw;
+    height: 4.5vw;
+    width: 73vw;
+    border-bottom: 1px dotted #000;
+}
+
+.descriptionView_project h5{
+    font-size:1.5vw;
+}
+
+.descriptionView_project p{
+    font-size:1.2vw;
+    color:blue;
+}
+
+.projectEdit{
+    position: absolute;
+    height: 2vw;
+    width: 3.5vw;
+    font-size: 1vw;
+    margin:10.7vw 0vw 0vw 76vw;
+    border:solid;
+    border-width: 0.1vw;
+    background-color: #afafaf;
+
+}
+
+.projectDelete{
+    position: absolute;
+    height: 2vw;
+    width: 5vw;
+    font-size: 1vw;
+    margin:10.7vw 0vw 0vw 80vw;
+    border:solid;
+    border-width: 0.1vw;
+    background-color: #fc8888;
+
+}
+
+
+/*----------------プロジェクト作成画面-------------------*/
+
+.createProject{
+    font-size: 2vw;
+    margin: 2vw 0vw 0vw 3vw;
+}
+
+.project-information-main{
+    display: flex;
+    margin: 8vw 0vw 0vw -10vw;
+}
+
+.project-name{
+    font-size: 1.5vw;
+}
+
+.project-name input{
+    width: 35vw; 
+    height: 4.5vw;
+}
+
+.auto-item-project{
+    font-size: 1.5vw;
+    margin: 0vw 0vw 0vw 10vw;
+}
+
+.auto-item-project input{
+    width: 25vw;
+    height: 3.5vw;
+}
+
+.project-information{
+    font-size: 2vw;
+    margin: 8vw 0vw 0vw -12.5vw;
+}
+
+.project-information-sub{
+    border: solid;
+    height: 30vw;
+    width: 85vw;
+    margin: 3vw 0vw 0vw -10vw;
+    border-width: 0.1vw;
+}
+
+.object{
+    margin: 1.5vw 0vw 0vw 4vw;
+}
+
+.object input{
+    height: 4vw;
+    width: 76.5vw;
+}
+
+.description-project{
+    margin: 1.5vw 0vw 0vw 4vw;
+}
+
+.description-project input{
+    height: 12vw;
+    width: 76.5vw;
+}
+
+.save-project button{
+    font-size: 1.3vw;
+    margin: 2vw 0vw 0vw 70vw;
+    border-width: 0.1vw;
+    background-color: #f9f664;
+    border-radius: 0.5vw;  /* ←ボックスの角を丸く*/
+}
+
+
+/*----------------ドキュメントアップロード画面-------------------*/
+
+.upload-document{
+    font-size: 2vw;
+    margin: 2vw 0vw 0vw 3vw;
+}
+
+
+.upload-area {
+    margin: 8vw 0vw 0vw -12.5vw;
+    width: 40vw;
+    height: 20vw;
+    padding: 3vw;
+    text-align: center;
+    border-radius: 0.5vw;/* ←ボックスの角を丸く*/
+    box-shadow: 0 0 0.2vw #3e3e3e;
+    background-color: white;
+}
+ 
+.drag_and_drop {
+    margin: -1.7vw 0vw 0vw -1.7vw;
+    width: 37.5vw;
+    height: 17.5vw;
+    position: relative;
+    border: 0.3vw dotted rgba(43, 173, 249, 0.4);
+}
+
+.drag_and_drop i {
+    position: absolute;
+    font-size: 12vw;
+    opacity: .1;
+    width: 100%;
+    left: 0;
+    top: 3vw;
+}
+
+.drag_and_drop p {
+    font-size: 1.5vw;
+    width: 100%;
+    position: absolute;
+    top: 14.5vw;
+    opacity: .8;
+}
+ 
+#input-files {
+    top: 0;
+    left: 0;
+    opacity: 0;  /*「ファイルを選択」という文字を消すことができ、画面いっぱいにinputタグを広げる*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main-items{
+    display: flex;
+    margin: 4vw 0vw 0vw -12vw;
+}
+
+.select-item{
+    font-size: 1.5vw;
+    height: 1vw;
+    width: 30vw;
+}
+
+.select-item input{
+    height: 3.5vw;
+}
+
+.auto-item-file{
+    font-size: 1.5vw;
+    width: 30vw;
+    margin: 0vw 0vw 0vw 10vw;
+}
+
+.auto-item-file input{
+    height: 3.5vw;
+}
+
+.document-information{
+    font-size: 2vw;
+    margin: 10vw 0vw 0vw -16vw;
+}
+
+.document-information-sub{
+    display: flex;
+    border: solid;
+    height: 20vw;
+    width: 85vw;
+    margin: 2vw 0vw 0vw -12vw;
+    border-width: 0.1vw;
+}
+
+.document-date{
+    margin: 1.5vw 0vw 0vw 4vw;
+}
+
+.document-date input{
+    height: 3vw;
+    width: 15vw;
+}
+
+
+.description{
+    margin: 1.5vw 0vw 0vw 5.5vw;
+}
+
+.description input{
+    height: 12vw;
+    width: 55vw;
+}
+
+.save-document input{
+    font-size: 1.3vw;
+    margin: 2vw 0vw 0vw 68vw;
+    border-width: 0.1vw;
+    background-color: #f9f664;
+    border-radius: 0.5vw;   /* ←ボックスの角を丸く*/
+}
+
+.chose-document{
+    position: absolute;
+    margin: -78.5vw 0vw 0vw 38vw;
+    height: 24vw;
+    width: 35vw;
+    border: solid;
+    border-width: 0.1vw;
+}
+
+.chose-document-top{
+    font-size: 1.5vw;
+    border-bottom:solid;
+    border-width: 0.1vw;
+    text-align: center;
+    background-color: #e2e1e1;
+}
+
+/*--------------フォルダ一覧画面-------------------------*/
+
+.project-title{
+    font-size: 2.5vw;
+    margin:1.5vw 0vw 0vw 2.5vw;
+}
+
+
+.addFolderAll{
+    display: flex;
+    position: absolute;
+    margin:1.5vw 0vw 0vw 86vw;
+}
+
+.addFolderButton{
+    height:2vw;
+    width:8vw;
+    font-size: 1vw;
+    border-width:0.1vw;
+    margin:0vw 0vw 0vw 2vw;
+    background-color: rgb(223, 228, 254);
+}
+
+
+        /*----#### User Guide Uploadモーダル（ここから）####---------------------------------------*/
+        * {
+            box-sizing: border-box;
+        }
+        /* ---モーダルを開いた時の外側のレイヤー--- */
+        .over-lay-folder {
+            content: '';
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /*モーダルを開いたときの背景高さ*/
+            height: 100vw; /*モーダルを開いたときの背景高さ*/
+            opacity: 0.7;
+            background-color:rgb(9, 9, 9, 0.8);
+        }
+        
+        .wrapper {
+            max-width: 40vw;
+            margin: 0 auto;
+        }
+
+        /* ---モーダルウィンドウ-----*/
+        .addFolderModal {
+            display: none;
+            position: absolute;
+            top: 25vw;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            width: 25vw;
+            height: 15vw;
+            background-color: #fff;
+            border-radius: 1vw; /*ボックスの角を丸くする*/
+            box-shadow: 0 0 0.8vw gray;  /*ボックスに影をつけて厚みを出す*/
+            }
+
+        .addFolderModal h3{
+            text-align: center;
+            font-size:1.5vw;
+            margin:2.5vw 0vw 0vw 0vw;
+            }
+
+        .addFolderModal input{
+            border:solid;
+            border-width: 0.1vw;
+            height: 3vw;
+            width: 20vw;
+            margin:1vw 0vw 0vw 2.5vw;
+            }
+
+        .folder-modal-submit-btn{
+            width:20vw;
+            height:3vw;
+            font-size:1.5vw;
+            color: white;
+            background-color:rgb(168, 197, 255);
+            border:none;
+            justify-content: center;
+            margin:1vw 0vw 0vw 2.5vw;
+            box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+            }
+
+        /* モーダルを開いたとき */
+        .addFolderModal.active,
+        .over-lay-folder.active {
+            display: block;
+            }
+
+        /*----#### User Guide Uploadモーダル（ここまで）####---------------------------------------*/
+
+.folderTable{
+    position: absolute;
+    font-size: 2vw;
+    margin: 7vw 0vw 0vw 5vw;
+}
+
+.folderLine{
+    font-size: 2vw;
+    padding: 0em 0em 0.5em 0em;
+}
+
+.documentsLine{
+    padding: 0em 0em 1.5em 1.5em;
+}
+
+/*--------------ファイル確認画面-------------------------*/
+
+.file-title{
+    color: #1279d3;
+    font-size: 2.5vw;
+    margin:2vw 0vw 0vw 2.5vw;
+}
+
+.document-download{
+    font-size: 1.1vw;
+    position: absolute;
+    margin:7vw 0vw 0vw 59vw;
+}
+
+.favorite-mark{
+    font-size: 1.1vw;
+    position: absolute;
+    margin:7vw 0vw 0vw 66vw;
+}
+
+
+.file-information{
+    position: absolute;
+    margin: 3vw 0vw 0vw 72vw;
+    height: 62vw;
+    width: 24vw;
+    border: solid;
+    border-width: 0.1vw;
+}
+
+.file-information-top{
+    font-size: 1.25vw;
+    height: 2.5vw;
+    width: 24vw;
+    margin:-0.1vw 0vw 0vw -0.1vw;
+    border:solid;
+    border-width: 0.1vw;
+    text-align: center;
+    background-color: rgb(200, 210, 223);
+}
+
+.file-projectName{
+    position: absolute;
+    margin: 1vw 0vw 0vw 1vw;
+    font-size: 1.2vw;
+}
+
+.file-information input{
+    height: 2.5vw;
+    width: 22vw;
+    margin: 3.5vw 0vw 0vw 1vw;
+}
+
+#description_file{
+    height: 25vw;
+    width: 22vw;
+}
+
+.description_file{
+    margin: 3.5vw 0vw 0vw 1vw;
+}
+
+.documentView{
+    width: 65vw;
+    height: 65vw;
+    margin:10vw 0vw 0vw -30vw;
+}
+
+
+/* ------------------------------------------------------ */
+.over-lay-user{
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*モーダルを開いたときの背景高さ*/
+    height: 100vw; /*モーダルを開いたときの背景高さ*/
+    opacity: 0.7;
+    background-color:rgb(9, 9, 9, 0.8);
+
+}
+
+.useSystemUpdateModal {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 1vw; /*ボックスの角を丸くする*/
+    box-shadow: 0 0 0.8vw gray;  /*ボックスに影をつけて厚みを出す*/
+    margin:0vw 0vw 0vw 20vw;
+    }
+
+      /* モーダルを開いたとき */
+  .useSystemUpdateModal.active,
+  .over-lay-user.active {
+        display: block;
+        }
+
+        #setImage img{
+            margin:2.5vw 5vw 0vw 0vw;
+        }
+
+        #setUsrName{
+            margin:2.5vw 1vw 0vw 0vw;
+        }
+
+        #setAddress{
+            margin:0.5vw 1vw 0vw 0vw;
+        }
+
+        #changeInformation{
+            border: none;
+            background-color: #9379fd;
+        }
+
+        #logout{
+            border: none;
+            background-color: #bdbdbd;
+        }
+
+
+/* --- Edit Project  ----- */
+.createProject_edit{
+    font-size: 2vw;
+    margin: 2vw 0vw 0vw 2vw;
+}
+
+.project-information_edit{
+    font-size: 2vw;
+    margin: 8vw 0vw 0vw -10vw;
+}

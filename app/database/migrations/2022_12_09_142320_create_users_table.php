@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->enum('role', ['member', 'admin'])->default('member'); //権限
+            $table->binary('image')->nullable(); //プロフィール写真
         });
     }
 

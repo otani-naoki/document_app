@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+
+/*----#### システムログイン前のトップページ（ここから）####--------------------------------*/
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.header_top{
+    position:fixed;  /* ← ヘッダーのボックスを固定（自然に他の要素の上部に乗る） */
+    width:100vw;   /* ← 固定すると幅が小さくなったので、bodyのサイズ設定に合わせた */
+}
+
+.head_line{
+    background-color:rgb(20, 35, 58);
+    height:3.5vw;
+    box-shadow: 0 0.1vw 0.5vw rgb(200, 209, 232); /*ヘッダー下部に影*/
+}
+
+.head_line_items{
+    position: absolute;
+    display: flex;
+    margin: 0.5vw 0vw 0vw 71vw;
+}
+
+.head_line_items button{
+    font-size: 0.5vw;
+    margin:0.3vw 0vw 0vw 1vw;
+    width: 7vw;
+    height: 2vw;
+    border-width: 0.1vw;
+    background-color: rgb(173, 181, 193);
+    border-radius:0.5vw;
+}
+
+.systemImagePhoto{
+    height: 12vw;
+    width: 24vw;
+    margin:-14.5vw 0vw 0vw 70vw;
+    border-radius: 0.5vw;
+    box-shadow: 0 0.3vw 3vw 0vw rgb(236, 236, 251);
+
+}
+
+
+.systemName_line{
+    background-color:white;
+    height:6.5vw;
+    box-shadow: 0 0.1vw 0.1vw gray; /*ヘッダー下部に影*/
+    padding:1vw 0vw 0vw 2vw;
+}
+
+.systemName_line a{
+text-decoration: none;
+font-size: 3vw;
+color:rgb(11, 8, 8);
+
+}
+
+.login_line{
+    background-color: rgb(168, 197, 255);
+    height:26vw;
+    background: linear-gradient(to bottom, #4ba6fb 0%, #aabaf9 80%);
+}
+
+.login_button{
+    width:15vw;
+    height:4vw;
+    margin:20vw 0vw 0vw 5vw;
+    font-size: 2vw;
+    border-width:0.1vw;
+    border-radius: 0.7vw;  /* ←ボックスの角を丸く*/
+    background: linear-gradient(to bottom, #4ba6fb 0%, #fe3cb1 80%);
+}
+
+
+
+.userGuide_link{
+    margin:5vw 0vw 0vw 10vw;
+}
+
+.userGuide_link p{
+    font-size: 2vw;
+    margin:0vw 0vw -0.5vw 0vw;
+}
+
+.userGuide_link a{
+    font-size: 1.5vw;
+}
+
+.userGuide_view iframe{
+    margin:3vw 0vw 0vw 23vw;
+    width: 55vw;
+    height: 55vw;
+    text-align:center;
+}
+
+.userGuide_upload {
+    margin:2vw 0vw 2vw 75vw;
+    font-size: 1vw;
+    border-width:0.1vw;
+    background: linear-gradient(to bottom, #4ba6fb 0%, #fe3cb1 80%);
+}
+
+.middle{
+    height:15vh;
+    margin:5vw 0vw 0vw 0vw;
+    background-color:rgb(20, 35, 58);
+    box-shadow: 0 0.1vw 0.1vw rgb(200, 209, 232); /*ヘッダー下部に影*/
+}
+
+
+
+.footer{
+    height:20vw;
+    padding:1vw 0vw 0vw 2vw;
+    margin:0vw 0vw 0vw 0vw;
+    background-color: rgb(168, 197, 255);
+    background: linear-gradient(to bottom, #4ba6fb 0%, #aabaf9 80%);
+
+}
+
+.footer p{
+    font-size:2.5vw;
+    color:white;
+
+}
+
+.sns{
+    position: absolute;
+    color:white;
+    margin:-5vw 0vw 0vw 78vw;
+}
+
+.footer-bottom{
+    position: absolute;
+    text-align: center;
+    color:white;
+    width: 60vw;
+    margin:8vw 0vw 0vw 18vw;
+    border-top:solid;
+    border-width: 0.1vw;
+}
+
+
+
+/*----#### User Guide Uploadモーダル（ここから）####---------------------------------------*/
+
+* {
+    box-sizing: border-box;
+  }
+  /* ---モーダルを開いた時の外側のレイヤー--- */
+  .over-lay {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /*モーダルを開いたときの背景高さ*/
+    height: 100vw; /*モーダルを開いたときの背景高さ*/
+    opacity: 0.7;
+    background-color:rgb(9, 9, 9, 0.8);
+  }
+  
+  .wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* ---モーダルウィンドウ-----*/
+  .useGuideUpdateModal {
+    display: none;
+    position: absolute;
+    top: 83.5vw;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 17.5vw;
+    background-color: #fff;
+    border-radius: 1vw; /*ボックスの角を丸くする*/
+    box-shadow: 0 0 0.8vw gray;  /*ボックスに影をつけて厚みを出す*/
+    }
+
+    .useGuideUpdateModal h3{
+        text-align: center;
+        font-size:1.5vw;
+        margin:2.5vw 0vw 0vw 0vw;
+        }
+
+        .useGuideUpdateModal p{
+            font-size:1vw;
+            margin:2.5vw 0vw 0vw 2.35vw;
+            }
+
+        .guideChooseFile{
+            font-size:0.75vw ;
+            margin:0vw 0vw 0vw 2.35vw;
+        }
+
+
+        .modal-submit-btn{
+            width:20vw;
+            height:3vw;
+            font-size:1.5vw;
+            color: white;
+            background-color:rgb(168, 197, 255);
+            border:none;
+            justify-content: center;
+            margin:1vw 0vw 0vw 2.5vw;
+            box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+            }
+
+
+
+  /* モーダルを開いたとき */
+  .useGuideUpdateModal.active,
+  .over-lay.active {
+    display: block;
+    }
+
+/*----#### User Guide Uploadモーダル（ここまで）####---------------------------------------*/
+
+
+/*----#### システムログイン前のトップページ（ここまで）####--------------------------------*/
+
+
+
